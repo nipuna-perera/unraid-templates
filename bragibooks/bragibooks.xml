@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>BragiBooks</Name>
+  <Repository>https://github.com/djdembeck/bragibooks</Repository>
+  <Registry>ghcr.io/djdembeck/bragibooks:main</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Bragi - (god of poetry in Norse mythology): Bragibooks provides a minimal and straightforward webserver that you can run remotely or locally on your server. Since Bragibooks runs in a docker, you no longer need to install dependencies on whichever OS you are on. You can&#xD;
+&#xD;
+Some basics of what Bragi does:&#xD;
+&#xD;
+Merge multiple files&#xD;
+Convert mp3(s)&#xD;
+Cleanup existing data on an m4b file&#xD;
+More features on m4b-merge's help page</Overview>
+  <Category>Other: MediaApp:Books</Category>
+  <WebUI>http://[IP]:[PORT:18000]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams>-e LOG_LEVEL=WARNING</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1647119481</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Bragi - (god of poetry in Norse mythology): Bragibooks provides a minimal and straightforward webserver that you can run remotely or locally on your server. Since Bragibooks runs in a docker, you no longer need to install dependencies on whichever OS you are on. You can&#xD;
+&#xD;
+Some basics of what Bragi does:&#xD;
+&#xD;
+Merge multiple files&#xD;
+Convert mp3(s)&#xD;
+Cleanup existing data on an m4b file&#xD;
+More features on m4b-merge's help page</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/input</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/output</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="input" Target="/input" Default="/mnt/user/downloads/audiobooks" Mode="rw" Description="Container Path: /input" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="output" Target="/output" Default="/mnt/user/media/audiobooks" Mode="rw" Description="Container Path: /output" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
